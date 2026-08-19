@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://somaia-mohammed.github.io/digitalmarketing.qa/sitemap.xml
+Sitemap: https://qadigitalmarketing.github.io/sitemap.xml
