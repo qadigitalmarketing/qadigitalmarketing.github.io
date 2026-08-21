@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | Somaia Mohamed</title>
-<link rel="icon" type="image/png" href="/favicon.png.png">
 <meta name="description" content="Digital Marketing Strategist and SEO Specialist serving Qatar, Saudi Arabia and GCC businesses.">
 <meta name="keywords" content="digital marketing Qatar, digital marketing specialist Qatar, SEO Qatar, SEO GCC, Saudi Arabia SEO, real estate marketing Qatar, e-commerce SEO GCC, marketing management Qatar">
 <meta name="google-site-verification" content="e24Axtdung1teUWZf1B8F5zy9ya158HYqXwpYfRYWtg">
@@ -146,6 +145,46 @@ p{margin:0 0 16px}
  .section{padding:58px 0}.trust-strip{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Google Reviews slider — shared with homepage */
+.google-reviews-section{padding:78px 0 82px;position:relative;overflow:hidden;background:var(--cream)}
+.google-reviews-section:before{content:"";position:absolute;width:420px;height:420px;right:-220px;top:-150px;border:1px solid rgba(13,27,61,.06);border-radius:50%;box-shadow:0 0 0 32px rgba(13,27,61,.018),0 0 0 72px rgba(13,27,61,.012);pointer-events:none}
+.reviews-heading{text-align:center;max-width:760px;margin:0 auto 34px}
+.reviews-heading h2{margin-top:14px}
+.reviews-heading p{color:var(--muted);font-size:.9rem}
+.reviews-slider{position:relative}
+.reviews-viewport{overflow:hidden;padding:8px 2px 22px}
+.reviews-track{display:flex;gap:20px;transition:transform .65s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.review-card{flex:0 0 calc((100% - 40px)/3);height:390px;display:flex;flex-direction:column;background:rgba(255,255,255,.78);border:1px solid rgba(13,27,61,.10);border-radius:20px;padding:25px 24px 22px;box-shadow:0 18px 45px rgba(13,27,61,.07);position:relative;overflow:hidden}
+.review-card:after{content:"";position:absolute;right:-48px;bottom:-60px;width:150px;height:150px;border:1px solid rgba(199,160,106,.20);border-radius:50%;pointer-events:none}
+.review-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.review-avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--beige);color:var(--navy);font-family:Georgia,"Times New Roman",serif;font-size:1rem;font-weight:700;flex:0 0 44px}
+.review-meta{min-width:0}
+.review-name{font-weight:800;color:var(--navy);font-size:.82rem;line-height:1.2}
+.review-source{font-size:.62rem;color:var(--muted);margin-top:3px}
+.review-stars{color:var(--gold);letter-spacing:2px;font-size:1rem;white-space:nowrap;margin-bottom:14px}
+.review-text{font-size:.9rem;line-height:1.9;color:#263754;margin:0;flex:1;overflow:hidden}
+.review-text[dir="rtl"]{font-family:Arial,"Tahoma",sans-serif;text-align:right}
+.review-read{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#9c6f2d;font-size:.72rem;font-weight:800;border-bottom:1px solid rgba(199,160,106,.7);padding-bottom:3px;transition:.25s}
+.review-read:hover{transform:translateX(3px);color:var(--navy)}
+.review-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:2px}
+.review-arrow{width:42px;height:42px;border-radius:50%;border:1px solid rgba(13,27,61,.14);background:var(--white);color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:.25s}
+.review-arrow:hover{background:var(--navy);color:var(--cream);transform:translateY(-2px)}
+.review-dots{display:flex;align-items:center;justify-content:center;gap:7px}
+.review-dot{width:7px;height:7px;border:0;border-radius:50%;padding:0;background:rgba(13,27,61,.22);cursor:pointer;transition:.3s}
+.review-dot.active{width:22px;border-radius:20px;background:var(--gold)}
+@media(max-width:1050px){
+  .review-card{flex-basis:calc((100% - 20px)/2)}
+}
+@media(max-width:700px){
+  .google-reviews-section{padding:62px 0 68px}
+  .reviews-heading{margin-bottom:24px}
+  .reviews-viewport{padding-bottom:16px}
+  .review-card{flex-basis:100%;height:410px;padding:23px 20px}
+  .review-text{font-size:.88rem}
+}
+
+
 </style>
 </head>
 <body>
@@ -171,6 +210,88 @@ p{margin:0 0 16px}
 <article class="card reveal"><div class="icon">↗</div><h3>Business Outcomes</h3><p>Visibility matters when it contributes to stronger enquiries, qualified traffic and clearer customer journeys.</p></article>
 </div></div></section>
 <section class="section section-dark"><div class="container"><div class="section-head reveal"><span class="eyebrow">Positioning</span><h2>Digital marketing for brands competing in search.</h2><p>I combine SEO, content thinking and marketing management to create a more connected digital presence.</p></div><div class="process"><div class="process-step reveal"><div class="num">01</div><h3>SEO</h3><p>Technical foundations, content opportunities and local search visibility.</p></div><div class="process-step reveal"><div class="num">02</div><h3>Strategy</h3><p>Priorities based on market opportunity, customer intent and business goals.</p></div><div class="process-step reveal"><div class="num">03</div><h3>Content</h3><p>Useful pages that answer real questions and support commercial journeys.</p></div><div class="process-step reveal"><div class="num">04</div><h3>Management</h3><p>Ongoing direction, reporting and optimization instead of one-off activity.</p></div></div></div></section>
+<section class="google-reviews-section">
+ <div class="container">
+  <div class="reviews-heading reveal">
+   <span class="eyebrow">Published Google Reviews</span>
+   <h2>What clients are saying.</h2>
+   <p>Real feedback shared on my Google Business Profile.</p>
+  </div>
+
+  <div class="reviews-slider reveal" aria-label="Google reviews">
+   <div class="reviews-viewport">
+    <div class="reviews-track" id="reviewsTrack">
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">MA</div>
+       <div class="review-meta"><div class="review-name">Mohamad Aldaly</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">أسمية جمعت بين الخلق العالي و الاحترافية و نتائجها معنا مبهرة. اشكرها شكرا جزيلا</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">SA</div>
+       <div class="review-meta"><div class="review-name">Salma Abd El Monem</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">الباشمهندسة سميه إنسانة خلوقة جدا، لا تبخل بالمعلومة على أحد، متطورة في شغلها، ربنا يجازيك خير يارب</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">TG</div>
+       <div class="review-meta"><div class="review-name">Tarek Gamal</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">باشمهندسة سمية من الناس الكُفء جدا؛ السلسلة فى التعامل؛ وتعطى زكاة العلم، بإفادة الآخرين، وتقديم المساعدة لهم متى استطاعت.</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">AT</div>
+       <div class="review-meta"><div class="review-name">Ahmed Taha</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">كلمة من اشطر الناس قليله جدا عليكي يااستاذه سميه. انا دخلت المجال دا مع كذا حد وبرجع اقول ان مفيش اشطر منك وثقه وامانه عاليه، الموضوع مش مجرد تقيم، دا حقك ليكي انتي ساعديني كتير عن أي حد اشتغلت معاه في المجال دا. ربنا يبارك فيكي ويزيدك نجاح ونجاح.</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">RW</div>
+       <div class="review-meta"><div class="review-name">rewan work</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">اول حاجة شخصية محترمة جدا و ذوق بجد. تاني حاجة شاطرة و ملتزمة في الشغل و منظمة و كمان الشغل مريح بسبب إن كل حاجة متسلمه صح و منظمة. ما شاء الله بجد ❤️</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+
+     <article class="review-card">
+      <div class="review-top">
+       <div class="review-avatar">KA</div>
+       <div class="review-meta"><div class="review-name">khaled Ali</div><div class="review-source">Google Review · 5 stars</div></div>
+      </div>
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="review-text" dir="rtl">بصراحة من أفضل الناس اللي اتعاملت معاها في المجال، مش بس شاطرة ومحترفة جدا في شغلها، لكن كمان عندها أمانة وضمير في التعامل، وبتحرص إن كل حاجة تتعمل صح وبأفضل شكل ممكن. التعامل معاها مريح جدا، وكل حاجة منظمة وواضحة، وده بيفرق جدا في الشغل. شكرا يا بشمهندسة سمية على مساعدتك وذوقك واحترافيتك، وربنا يوفقك ويزيدك نجاح ❤️</p>
+      <a class="review-read" href="https://share.google/CH9Yr72BZzd7c7EfZ" target="_blank" rel="noopener">Read more ↗</a>
+     </article>
+    </div>
+   </div>
+
+   <div class="review-controls">
+    <button class="review-arrow" id="reviewsPrev" type="button" aria-label="Previous review">←</button>
+    <div class="review-dots" id="reviewsDots" aria-label="Review slides"></div>
+    <button class="review-arrow" id="reviewsNext" type="button" aria-label="Next review">→</button>
+   </div>
+  </div>
+ </div>
+</section>
+
 <section class="section"><div class="container"><div class="contact-band"><div class="reveal"><span class="eyebrow">Work Together</span><h2>Looking for a digital marketing specialist in Qatar or the GCC?</h2><p>Let’s discuss your market, your current visibility and where the strongest opportunities may be.</p></div><div class="contact-box reveal"><strong>WhatsApp Me</strong><p>Always available for a direct conversation.</p><a class="btn btn-primary" href="https://wa.me/201145654675" target="_blank">Contact Now ↗</a></div></div></div></section>
 </main>
 
@@ -198,6 +319,68 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(menu&&mobile){menu.addEventListener("click",()=>{const open=mobile.classList.toggle("open");menu.setAttribute("aria-expanded",open)})}
   const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const track=document.getElementById("reviewsTrack");
+  const viewport=track?.parentElement;
+  const prev=document.getElementById("reviewsPrev");
+  const next=document.getElementById("reviewsNext");
+  const dotsWrap=document.getElementById("reviewsDots");
+  if(!track||!viewport||!prev||!next||!dotsWrap) return;
+
+  const cards=[...track.querySelectorAll(".review-card")];
+  let visible=3, index=0, timer;
+
+  const getVisible=()=>{
+    if(window.innerWidth<=700) return 1;
+    if(window.innerWidth<=1050) return 2;
+    return 3;
+  };
+
+  const buildDots=()=>{
+    visible=getVisible();
+    const pages=Math.max(1,cards.length-visible+1);
+    dotsWrap.innerHTML="";
+    for(let i=0;i<pages;i++){
+      const dot=document.createElement("button");
+      dot.type="button";
+      dot.className="review-dot"+(i===index?" active":"");
+      dot.setAttribute("aria-label","Go to review slide "+(i+1));
+      dot.addEventListener("click",()=>goTo(i,true));
+      dotsWrap.appendChild(dot);
+    }
+    index=Math.min(index,pages-1);
+  };
+
+  const goTo=(nextIndex,manual=false)=>{
+    visible=getVisible();
+    const max=Math.max(0,cards.length-visible);
+    index=Math.max(0,Math.min(nextIndex,max));
+    const gap=20;
+    const cardWidth=cards[0].getBoundingClientRect().width;
+    track.style.transform=`translateX(-${index*(cardWidth+gap)}px)`;
+    [...dotsWrap.children].forEach((dot,i)=>dot.classList.toggle("active",i===index));
+    if(manual) restart();
+  };
+
+  const restart=()=>{
+    clearInterval(timer);
+    timer=setInterval(()=>goTo(index>=cards.length-getVisible()?0:index+1),5000);
+  };
+
+  prev.addEventListener("click",()=>goTo(index<=0?Math.max(0,cards.length-getVisible()):index-1,true));
+  next.addEventListener("click",()=>goTo(index>=cards.length-getVisible()?0:index+1,true));
+  window.addEventListener("resize",()=>{buildDots();goTo(index);});
+  viewport.addEventListener("mouseenter",()=>clearInterval(timer));
+  viewport.addEventListener("mouseleave",restart);
+  viewport.addEventListener("touchstart",()=>clearInterval(timer),{passive:true});
+  viewport.addEventListener("touchend",restart,{passive:true});
+
+  buildDots();
+  requestAnimationFrame(()=>goTo(0));
+  restart();
 });
 </script>
 </body>
