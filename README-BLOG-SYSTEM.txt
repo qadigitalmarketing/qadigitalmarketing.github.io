@@ -1,31 +1,76 @@
-REUSABLE BLOG SYSTEM
+SOMAIA MOHAMED — CLEAN REUSABLE BLOG SYSTEM
 
-ONLY THESE 3 FILES ARE AFFECTED:
-- blog.html
-- blog-post.html
-- blog-data.js
+URL STRUCTURE
+==============
+Articles now use clean GitHub Pages URLs:
 
-The logo is embedded directly in the two HTML pages.
+https://qadigitalmarketing.github.io/blog/article-slug/
 
-ADDING A FUTURE BLOG:
-Edit ONLY blog-data.js.
-Copy the existing post object, then change:
-slug
-title
-category
-date
-author
-description
-content
+Example:
+https://qadigitalmarketing.github.io/blog/qatar-real-estate-marketing/
 
-The Blog page automatically creates the card.
-The article template automatically creates the article page.
+There is NO:
+?slug=
+and no blog-post.html in the public article URL.
 
-You do NOT edit blog.html for every new article.
-You do NOT edit blog-post.html for every new article.
+FILES
+=====
+blog.html
+    Blog listing page. It automatically creates article cards from blog-data.js.
 
-Article URL:
-blog-post.html?slug=your-article-slug
+blog-post.html
+    Master article template used by build-blog.py. It is not the public article URL.
 
-WhatsApp is already connected.
-LinkedIn currently uses LinkedIn's main site because the exact profile URL was not present in the supplied website files.
+blog-data.js
+    The only content file you normally edit for new posts.
+
+build-blog.py
+    Generates /blog/<slug>/index.html from blog-data.js.
+
+ADDING A NEW ARTICLE
+====================
+1. Add a new object to BLOG_POSTS in blog-data.js.
+2. Give it a unique lowercase hyphenated slug.
+3. Run:
+
+   python build-blog.py
+
+4. Upload the generated /blog/<slug>/index.html folder and blog-data.js.
+
+IMPORTANT GITHUB PAGES NOTE
+===========================
+GitHub Pages is static hosting. It does not execute build-blog.py on the server.
+
+You therefore have two choices:
+
+A) Run build-blog.py locally before each GitHub upload.
+   This is the recommended simple workflow.
+
+B) Later, add GitHub Actions to automatically run the builder whenever
+   blog-data.js changes. That can make publishing even easier.
+
+EXISTING DESIGN PRESERVED
+=========================
+The article pages keep the existing reusable system's:
+- embedded Somaia Mohamed logo
+- navy / cream / gold / beige brand colors
+- responsive CSS
+- animations
+- header/navigation
+- footer
+- floating WhatsApp Contact Now button
+- WhatsApp CTA
+- LinkedIn CTA
+- Google Search Console verification meta tag
+- article typography and layout
+
+OLD URL
+=======
+Old:
+blog-post.html?slug=qatar-real-estate-marketing
+
+NEW:
+blog/qatar-real-estate-marketing/
+
+The old blog-post.html remains as the master template; it is not linked publicly
+by the blog cards.
