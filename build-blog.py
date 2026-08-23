@@ -64,7 +64,7 @@ def get_string(obj, key):
     m = re.search(rf'{key}\s*:\s*"((?:\\.|[^"])*)"', obj, re.S)
     if not m:
         raise ValueError(f"Missing {key}")
-    return bytes(m.group(1), "utf-8").decode("unicode_escape")
+    return json.loads('"' + m.group(1) + '"')
 
 def get_content(obj):
     m = re.search(r'content\s*:\s*`(.*?)`\s*(?:,|\n?\})', obj, re.S)
