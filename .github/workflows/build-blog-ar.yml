@@ -1,0 +1,32 @@
+name: Build Arabic reusable blog
+on:
+  push:
+    branches: ["main", "master"]
+    paths:
+      - "ar/blog-data.js"
+      - "ar/blog-post.html"
+      - "ar/build-blog.py"
+      - "ar/blog.html"
+      - ".github/workflows/build-blog-ar.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build Arabic article pages
+        run: python3 ar/build-blog.py
+      - name: Commit generated Arabic blog pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ar/blog/
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "Build Arabic blog article pages"
+            git push
+          fi
